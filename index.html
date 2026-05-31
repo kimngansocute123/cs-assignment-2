@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OOP Polymorphism Demo</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:40px;
+}
+
+.box{
+    border:2px solid black;
+    padding:20px;
+    width:200px;
+    margin:10px auto;
+}
+
+.character{
+    display:inline-block;
+    margin:20px;
+    padding:20px;
+    border:2px solid blue;
+    cursor:pointer;
+}
+
+#result{
+    margin-top:30px;
+    font-size:24px;
+    color:red;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Inheritance Structure</h1>
+
+<div class="box">CharacterADT</div>
+
+↓
+<div class="box">Character</div>
+
+<div>
+    <div class="character" onclick="warriorAttack()">
+        Warrior
+    </div>
+
+    <div class="character" onclick="mageAttack()">
+        Mage
+    </div>
+</div>
+
+<h2>Polymorphism Result</h2>
+
+<div id="result">
+Click a character
+</div>
+
+<script>
+
+function warriorAttack(){
+    document.getElementById("result").innerHTML =
+    "Warrior attacks! Damage: -25 HP";
+}
+
+function mageAttack(){
+    document.getElementById("result").innerHTML =
+    "Mage casts Fireball! Damage: -40 HP";
+}
+
+</script>
+
+</body>
+</html>
